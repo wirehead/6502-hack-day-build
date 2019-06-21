@@ -253,22 +253,6 @@ NoConn ~ 4850 2750
 NoConn ~ 4850 2350
 NoConn ~ 4850 1550
 NoConn ~ 4850 1650
-NoConn ~ 6050 1150
-NoConn ~ 6050 1250
-NoConn ~ 6050 1350
-NoConn ~ 6050 1450
-NoConn ~ 6050 1550
-NoConn ~ 6050 1650
-NoConn ~ 6050 1750
-NoConn ~ 6050 1850
-NoConn ~ 6050 1950
-NoConn ~ 6050 2050
-NoConn ~ 6050 2150
-NoConn ~ 6050 2250
-NoConn ~ 6050 2350
-NoConn ~ 6050 2450
-NoConn ~ 6050 2550
-NoConn ~ 6050 2650
 Wire Wire Line
 	4150 1950 4150 2050
 Connection ~ 4150 2050
@@ -277,53 +261,6 @@ Wire Wire Line
 Connection ~ 4150 2650
 Wire Wire Line
 	4150 2650 4150 3550
-$Comp
-L power:VCC #PWR05
-U 1 1 5D10E2C5
-P 7200 2650
-F 0 "#PWR05" H 7200 2500 50  0001 C CNN
-F 1 "VCC" H 7217 2823 50  0000 C CNN
-F 2 "" H 7200 2650 50  0001 C CNN
-F 3 "" H 7200 2650 50  0001 C CNN
-	1    7200 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR04
-U 1 1 5D10E503
-P 6650 4050
-F 0 "#PWR04" H 6650 3800 50  0001 C CNN
-F 1 "GND" H 6655 3877 50  0000 C CNN
-F 2 "" H 6650 4050 50  0001 C CNN
-F 3 "" H 6650 4050 50  0001 C CNN
-	1    6650 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 2850 6650 2850
-Wire Wire Line
-	6650 2850 6650 3050
-Wire Wire Line
-	6050 3050 6650 3050
-Connection ~ 6650 3050
-Wire Wire Line
-	6650 3050 6650 3250
-Wire Wire Line
-	6050 3250 6650 3250
-$Comp
-L Device:R R5
-U 1 1 5D114912
-P 6650 3800
-F 0 "R5" H 6720 3846 50  0000 L CNN
-F 1 "47" H 6720 3755 50  0000 L CNN
-F 2 "" V 6580 3800 50  0001 C CNN
-F 3 "~" H 6650 3800 50  0001 C CNN
-	1    6650 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 3950 6650 4050
-Connection ~ 6650 3250
 $Comp
 L power:VCC #PWR03
 U 1 1 5D119AD3
@@ -339,89 +276,6 @@ Wire Wire Line
 	4150 1700 4150 1950
 Connection ~ 4150 1950
 Wire Wire Line
-	6650 3250 6650 3650
-$Comp
-L Device:R R6
-U 1 1 5D12035E
-P 6900 2950
-F 0 "R6" V 6693 2950 50  0000 C CNN
-F 1 "4.7k" V 6784 2950 50  0000 C CNN
-F 2 "" V 6830 2950 50  0001 C CNN
-F 3 "~" H 6900 2950 50  0001 C CNN
-	1    6900 2950
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5D120A86
-P 6900 3150
-F 0 "R7" V 6693 3150 50  0000 C CNN
-F 1 "4.7k" V 6784 3150 50  0000 C CNN
-F 2 "" V 6830 3150 50  0001 C CNN
-F 3 "~" H 6900 3150 50  0001 C CNN
-	1    6900 3150
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5D120D09
-P 6900 3350
-F 0 "R8" V 6693 3350 50  0000 C CNN
-F 1 "4.7k" V 6784 3350 50  0000 C CNN
-F 2 "" V 6830 3350 50  0001 C CNN
-F 3 "~" H 6900 3350 50  0001 C CNN
-	1    6900 3350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 5D120FBF
-P 6900 3450
-F 0 "R9" V 6693 3450 50  0000 C CNN
-F 1 "4.7k" V 6784 3450 50  0000 C CNN
-F 2 "" V 6830 3450 50  0001 C CNN
-F 3 "~" H 6900 3450 50  0001 C CNN
-	1    6900 3450
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 5D121103
-P 6900 3550
-F 0 "R10" V 6693 3550 50  0000 C CNN
-F 1 "4.7k" V 6784 3550 50  0000 C CNN
-F 2 "" V 6830 3550 50  0001 C CNN
-F 3 "~" H 6900 3550 50  0001 C CNN
-	1    6900 3550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6050 2950 6750 2950
-Wire Wire Line
-	6050 3150 6750 3150
-Wire Wire Line
-	6050 3350 6750 3350
-Wire Wire Line
-	6050 3450 6750 3450
-Wire Wire Line
-	6050 3550 6750 3550
-Wire Wire Line
-	7050 2950 7050 3150
-Connection ~ 7050 3150
-Wire Wire Line
-	7050 3150 7050 3350
-Connection ~ 7050 3350
-Wire Wire Line
-	7050 3350 7050 3450
-Connection ~ 7050 3450
-Wire Wire Line
-	7050 3450 7050 3550
-Wire Wire Line
-	7050 2950 7200 2950
-Wire Wire Line
-	7200 2650 7200 2950
-Connection ~ 7050 2950
-Wire Wire Line
 	5450 800  4050 800 
 Wire Wire Line
 	3100 800  3100 900 
@@ -435,10 +289,10 @@ Wire Wire Line
 	2550 1650 2250 1650
 NoConn ~ 4850 3050
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 5D128EB2
 P 4050 950
-F 0 "C?" H 4165 996 50  0000 L CNN
+F 0 "C4" H 4165 996 50  0000 L CNN
 F 1 "0.1 uF" H 4165 905 50  0000 L CNN
 F 2 "" H 4088 800 50  0001 C CNN
 F 3 "~" H 4050 950 50  0001 C CNN
@@ -459,10 +313,10 @@ Wire Wire Line
 	1300 1650 1450 1650
 Connection ~ 1300 1650
 $Comp
-L Device:CP C?
+L Device:CP C3
 U 1 1 5D135FB1
 P 1450 1400
-F 0 "C?" H 1568 1446 50  0000 L CNN
+F 0 "C3" H 1568 1446 50  0000 L CNN
 F 1 "4.7 uF" H 1568 1355 50  0000 L CNN
 F 2 "" H 1488 1250 50  0001 C CNN
 F 3 "~" H 1450 1400 50  0001 C CNN
@@ -479,4 +333,208 @@ Wire Wire Line
 Connection ~ 1450 1050
 Wire Wire Line
 	1450 1050 1800 1050
+$Comp
+L My-CPU-Stuff:Am29F010 U3
+U 1 1 5D13F866
+P 8100 2350
+F 0 "U3" H 8100 3881 50  0000 C CNN
+F 1 "Am29F010" H 8100 3790 50  0000 C CNN
+F 2 "" H 8100 2650 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 8100 2650 50  0001 C CNN
+	1    8100 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5D14071C
+P 7000 950
+F 0 "C5" H 7115 996 50  0000 L CNN
+F 1 "0.1 uF" H 7115 905 50  0000 L CNN
+F 2 "" H 7038 800 50  0001 C CNN
+F 3 "~" H 7000 950 50  0001 C CNN
+	1    7000 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 800  6700 800 
+Wire Wire Line
+	7950 800  7950 1000
+Connection ~ 5450 800 
+Connection ~ 7000 800 
+Wire Wire Line
+	7000 800  7950 800 
+Wire Wire Line
+	8400 3600 8400 3900
+Wire Wire Line
+	8400 3900 7300 3900
+Connection ~ 5450 3900
+Wire Wire Line
+	7000 1100 7000 3900
+Connection ~ 7000 3900
+Wire Wire Line
+	7000 3900 5450 3900
+NoConn ~ 6050 2650
+Wire Wire Line
+	6050 1150 7500 1150
+Wire Wire Line
+	7500 1250 6050 1250
+Wire Wire Line
+	6050 1350 7500 1350
+Wire Wire Line
+	7500 1450 6050 1450
+Wire Wire Line
+	6050 1550 7500 1550
+Wire Wire Line
+	7500 1650 6050 1650
+Wire Wire Line
+	6050 1750 7500 1750
+Wire Wire Line
+	7500 1850 6050 1850
+Wire Wire Line
+	6050 1950 7500 1950
+Wire Wire Line
+	7500 2050 6050 2050
+Wire Wire Line
+	6050 2150 7500 2150
+Wire Wire Line
+	7500 2250 6050 2250
+Wire Wire Line
+	6050 2350 7500 2350
+Wire Wire Line
+	7500 2450 6050 2450
+Wire Wire Line
+	7500 2550 6050 2550
+Wire Wire Line
+	7300 2650 7500 2650
+Wire Wire Line
+	7500 2750 7300 2750
+Wire Wire Line
+	7300 2750 7300 2650
+Wire Wire Line
+	7300 2750 7300 3350
+Connection ~ 7300 2750
+Connection ~ 7300 3900
+Wire Wire Line
+	7300 3900 7000 3900
+Wire Wire Line
+	7500 3350 7300 3350
+Connection ~ 7300 3350
+Wire Wire Line
+	7300 3350 7300 3450
+Wire Wire Line
+	7500 3450 7300 3450
+Connection ~ 7300 3450
+Wire Wire Line
+	7300 3450 7300 3900
+Wire Wire Line
+	7500 3150 6700 3150
+Wire Wire Line
+	6700 3150 6700 800 
+Connection ~ 6700 800 
+Wire Wire Line
+	6700 800  7000 800 
+Entry Wire Line
+	6150 2850 6250 2950
+Entry Wire Line
+	6150 2950 6250 3050
+Entry Wire Line
+	6150 3050 6250 3150
+Entry Wire Line
+	6150 3150 6250 3250
+Entry Wire Line
+	6150 3250 6250 3350
+Entry Wire Line
+	6150 3350 6250 3450
+Entry Wire Line
+	6150 3450 6250 3550
+Entry Wire Line
+	6150 3550 6250 3650
+Entry Wire Line
+	8800 1150 8900 1250
+Entry Wire Line
+	8800 1250 8900 1350
+Entry Wire Line
+	8800 1350 8900 1450
+Entry Wire Line
+	8800 1450 8900 1550
+Entry Wire Line
+	8800 1550 8900 1650
+Entry Wire Line
+	8800 1650 8900 1750
+Entry Wire Line
+	8800 1750 8900 1850
+Entry Wire Line
+	8800 1850 8900 1950
+Wire Bus Line
+	8900 3650 6250 3650
+Wire Wire Line
+	8700 1150 8800 1150
+Wire Wire Line
+	8800 1250 8700 1250
+Wire Wire Line
+	8700 1350 8800 1350
+Wire Wire Line
+	8800 1450 8700 1450
+Wire Wire Line
+	8700 1550 8800 1550
+Wire Wire Line
+	8800 1650 8700 1650
+Wire Wire Line
+	8700 1750 8800 1750
+Wire Wire Line
+	8800 1850 8700 1850
+Wire Wire Line
+	6150 2850 6050 2850
+Wire Wire Line
+	6050 2950 6150 2950
+Wire Wire Line
+	6150 3050 6050 3050
+Wire Wire Line
+	6050 3150 6150 3150
+Wire Wire Line
+	6150 3250 6050 3250
+Wire Wire Line
+	6050 3350 6150 3350
+Wire Wire Line
+	6150 3450 6050 3450
+Wire Wire Line
+	6050 3550 6150 3550
+Text Label 6050 2850 0    50   ~ 0
+D0
+Text Label 8700 1150 0    50   ~ 0
+D0
+Text Label 8700 1250 0    50   ~ 0
+D1
+Text Label 8700 1350 0    50   ~ 0
+D2
+Text Label 8700 1450 0    50   ~ 0
+D3
+Text Label 8700 1550 0    50   ~ 0
+D4
+Text Label 8700 1650 0    50   ~ 0
+D5
+Text Label 8700 1750 0    50   ~ 0
+D6
+Text Label 8700 1850 0    50   ~ 0
+D7
+Text Label 6050 2950 0    50   ~ 0
+D1
+Text Label 6050 3050 0    50   ~ 0
+D2
+Text Label 6050 3150 0    50   ~ 0
+D3
+Text Label 6050 3250 0    50   ~ 0
+D4
+Text Label 6050 3350 0    50   ~ 0
+D5
+Text Label 6050 3450 0    50   ~ 0
+D6
+Text Label 6050 3550 0    50   ~ 0
+D7
+NoConn ~ 7500 2850
+NoConn ~ 7500 2950
+Wire Bus Line
+	6250 2950 6250 3650
+Wire Bus Line
+	8900 1250 8900 3650
 $EndSCHEMATC
