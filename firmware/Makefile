@@ -10,4 +10,4 @@ firmware: $(SOURCES:.s65=.o)
 	cl65 -C firmware.cfg -t none -o $@ $^
 
 clean:
-	rm -f firmware *.o *.lst
+	del firmware *.o *.lst
