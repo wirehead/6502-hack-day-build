@@ -117,3 +117,29 @@ I ended up stripping the board of most of the wiring and starting over with a fr
 Then I spent some time mucking around with serial lines, trying to make sure I had the right connections, and from there, I was finally able to get the serial port up.
 
 Then I was able to go back and replace parts and determine that the 65c02 I had was somehow faulty.  Not sure if it was always bad and somehow a defective part made it into the supply chain or if I'd zapped it at some point in the past.
+
+# Step 6: CPU + Flash RAM + ACIA + RAM
+
+**Goal**: Make sure the board won't asplode when I plug it in.
+
+I managed to not break the board after not working with it since last August.  I did a careful check, made sure the wires weren't plugged wrong, etc.  After doing a bunch of checks, I plug it in, connect to the serial port, and it says "▒▒▒▒▒ ▒▒▒▒▒!" instead of "Hello World!"
+
+It turns out that one of the wires between the 6551 serial controller and the 6502 had come loose.  But, because it was so close to working, even though the firmware was setting that bit of a register, it was almost working.
+
+**Goal**: Get RAM hooked up.
+
+The 6502 is really nearly useless without some RAM, maybe about 256 bytes for the zero page and 256 bytes for the stack page.  Otherwise, all you've got is three registers to work with.
+
+Most of the modern designs tend towards a relatively friendly and easy memory mapper circuit.  We started out just using an inverter on A15 to select between the ACIA and the RAM, but now we've got two devices and they are very different sizes, so the usual approach is to put an 8-input NAND gate on A14 down to A8 to get a control line for the IO.
+
+I was kinda following [Dirk Grappendorf's tutorial](https://www.grappendorf.net/projects/6502-home-computer/) but I got myself slightly confused at the [RAM part](https://www.grappendorf.net/projects/6502-home-computer/ram.html) of things.
+
+What it turns out worked better for me was to just wire up the complete set of IO deciders right away to mimic the [SBC-2](http://sbc.rictor.org/sch2.html) design as well as [a later section of Dirk Grappendorf's tutorial](https://www.grappendorf.net/projects/6502-home-computer/via-ports-and-timers-blinking-led.html) before trying to hook up the RAM.
+
+The memory map here is pretty much:
+ - 0x0000-0x7EFF - The RAM
+ 	+ 0x0000-0x00FF - Zero Page
+ 	+ 0x0100-0x01FF - Stack page
+ 	+ 0x0200-0x7EFF - Available memory
+ - 0x7F00-0x7FFF - IO, where the first few bytes are the ACIA
+ - 0x8000-0xFFFF - The first 32k of the flash ROM

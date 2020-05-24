@@ -1,10 +1,10 @@
 ; Borrowed from: https://github.com/grappendorf/homecomputer-6502
                  .setcpu "6502"
 
-                 ACIA_DATA = $0000
-                 ACIA_STATUS = $0001
-                 ACIA_COMMAND = $0002
-                 ACIA_CONTROL = $0003
+                  ACIA_DATA = $7f00
+                  ACIA_STATUS = $7f01
+                  ACIA_COMMAND = $7f02
+                  ACIA_CONTROL = $7f03
 
                  .segment "VECTORS"
 
