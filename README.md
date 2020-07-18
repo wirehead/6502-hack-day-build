@@ -126,7 +126,7 @@ I managed to not break the board after not working with it since last August.  I
 
 It turns out that one of the wires between the 6551 serial controller and the 6502 had come loose.  But, because it was so close to working, even though the firmware was setting that bit of a register, it was almost working.
 
-**Goal**: Get RAM hooked up.
+**Goal**: Get RAM hooked up and IO decoded
 
 The 6502 is really nearly useless without some RAM, maybe about 256 bytes for the zero page and 256 bytes for the stack page.  Otherwise, all you've got is three registers to work with.
 
@@ -143,3 +143,5 @@ The memory map here is pretty much:
  	+ 0x0200-0x7EFF - Available memory
  - 0x7F00-0x7FFF - IO, where the first few bytes are the ACIA
  - 0x8000-0xFFFF - The first 32k of the flash ROM
+
+The whole works is getting way too unreliable.
